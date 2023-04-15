@@ -18,9 +18,7 @@ function PostItem({ post, admin = false }) {
             </Link>
 
             <Link href={`/${post.username}/${post.slug}`}>
-                <h2>
-                    <a>{post.title}</a>
-                </h2>
+                <h2>{post.title}</h2>
             </Link>
 
             <footer>
