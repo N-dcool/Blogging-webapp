@@ -48,7 +48,7 @@ function PostManager() {
                         <button onClick={() => setPreview(!preview)}>
                             {preview ? "Edit" : "Preview"}
                         </button>
-                        <Link href={`/${post.username}/${post.slug}`}>
+                        <Link href={`/${post.data().username}/${post.data().slug}`}>
                             <button className="btn-blue">Live view</button>
                         </Link>
                         <DeletePostButton postRef={postRef} />
@@ -101,7 +101,7 @@ function PostForm({ defaultValues, postRef, preview }) {
                         className={styles.checkbox}
                         type="checkbox"
                         name="published"
-                        {...register("Content")}
+                        {...register("published")}
                     />
                     <label>Published</label>
                 </fieldset>
@@ -127,7 +127,7 @@ function DeletePostButton({ postRef }) {
 
     return (
         <button className="btn-red" onClick={deletePost}>
-            Delete
+            Delete🗑️
         </button>
     );
 }
